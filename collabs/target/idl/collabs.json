@@ -1,0 +1,186 @@
+{
+  "version": "0.1.0",
+  "name": "collabs",
+  "instructions": [
+    {
+      "name": "createGitRepoXpPoolWithStake",
+      "accounts": [
+        {
+          "name": "gitRepoXpPoolAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "leader",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "leaderTokenAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "bonkMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "bonkEscrowTokenAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "gitRepoUrl",
+          "type": "string"
+        },
+        {
+          "name": "stakeAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "createContributor",
+      "accounts": [
+        {
+          "name": "contributorAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "leader",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "contributor",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "gitRepoXpPoolAccount",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "contributorGitName",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "transferXpToContributor",
+      "accounts": [
+        {
+          "name": "contributorAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "gitRepoXpPoolAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "leader",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "xpToTransfer",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "GitRepoXpPoolAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "leader",
+            "type": "publicKey"
+          },
+          {
+            "name": "xp",
+            "type": "u64"
+          },
+          {
+            "name": "gitRepoUrl",
+            "type": "string"
+          },
+          {
+            "name": "totalBonkInStake",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContributorAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "contributorPubkey",
+            "type": "publicKey"
+          },
+          {
+            "name": "contributorGitName",
+            "type": "string"
+          },
+          {
+            "name": "gitRepoXpPoolPubkey",
+            "type": "publicKey"
+          },
+          {
+            "name": "xp",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "NotEnoughXpsToTransfer",
+      "msg": "Not Enough Xps to tansfer!"
+    },
+    {
+      "code": 6001,
+      "name": "TokenMintMismatch",
+      "msg": "Token mint Mismatch!"
+    }
+  ],
+  "metadata": {
+    "address": "4HYr7M3ytiSoqr3Zh3iK1VcNNm7ZgrNikwmWYJdGMvw4",
+    "origin": "anchor",
+    "binaryVersion": "0.26.0",
+    "libVersion": "0.26.0"
+  }
+}
