@@ -1,0 +1,58 @@
+.btn{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    font-weight: 500;
+    font-size: 2.05rem;
+    line-height: 1.75rem;
+    font-family: Outfit;
+    border-radius: 1.90rem;
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 0.2rem;
+    /* margin-bottom: 0rem; */
+    cursor: pointer;
+    background: linear-gradient(101.81deg, rgb(240, 135, 255) -4.52%, rgb(110, 31, 206) 54.5%, rgba(110, 31, 206, 0.2) 101.41%);
+}
+.Innerbtn{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-family: Outfit;
+    border-radius: 1.90rem;
+    width: 210px;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    background: linear-gradient(226deg, rgb(240, 135, 255) -4.52%, rgb(110, 31, 206) 54.5%, rgba(110, 31, 206, 0.2) 101.41%);
+}
+
+.InnerCardForm {
+    background-image: url(https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fglow-lines.8568af37.jpg&w=1920&q=75) !important;
+    border: 1px solid !important;
+    box-shadow: 4px 7px 18px #e5e5e5 !important;
+    opacity: 80%;
+    height: 31rem;
+    width: 28rem;
+    border-radius: 18px;
+    padding: 0px 15px;
+}
+
+.svgDesign {
+    animation: spin 1s linear infinite;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 16.75rem;
+    margin-right: 0.75rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}

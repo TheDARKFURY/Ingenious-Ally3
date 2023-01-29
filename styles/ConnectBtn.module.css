@@ -1,0 +1,16 @@
+.btn{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-family: Outfit;
+    border-radius: 1.90rem;
+    width: 210px;
+    height: 3.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    background: linear-gradient(226deg, rgb(240, 135, 255) -4.52%, rgb(110, 31, 206) 54.5%, rgba(110, 31, 206, 0.2) 101.41%);
+}
+
