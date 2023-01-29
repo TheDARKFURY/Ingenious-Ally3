@@ -66,13 +66,13 @@ export const Landing = () => {
               </span>
             </p>
             <br />
-            <input
+            {/* <input
               type="text"
               name="Ally3"
               className="w-full rounded-xl h-14 bg-transparent text-[#939393] outline outline-[#939393] px-4"
               placeholder="Enter Wallet Address here"
               onChange={onChangeCpHandler}
-            ></input>
+            ></input> */}
             <br />
             <br />
             <div className="flex justify-center relative ">
@@ -82,7 +82,7 @@ export const Landing = () => {
                 onClick={checkCphandler}
               >
                 <i className="wallet-adapter-button-start-icon"></i>
-                Check CPs
+                {/* Check CPs */}
               </button>
             </div>
           </div>
