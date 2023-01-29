@@ -76,14 +76,14 @@ export const Landing = () => {
             <br />
             <br />
             <div className="flex justify-center relative ">
-              <button
+              {/* <button
                 className="wallet-adapter-button ConnectBtn_btn__9N7zE"
                 type="button"
                 onClick={checkCphandler}
-              >
+              > */}
                 <i className="wallet-adapter-button-start-icon"></i>
                 {/* Check CPs */}
-              </button>
+              {/* </button> */}
             </div>
           </div>
         </main>
