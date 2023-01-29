@@ -62,7 +62,7 @@ export const Landing = () => {
           <div>
             <p className=" text-xl 2xl:text-3xl xl:text-xl font-medium capitalize  font-Lexend flex flex-row gap-x-3 ">
               <span className="text-transparent bg-clip-text superdes tracking-tighter ">
-                {"Check your Contribution Power here "}
+                {/* {"Check your Contribution Power here "} */}
               </span>
             </p>
             <br />
